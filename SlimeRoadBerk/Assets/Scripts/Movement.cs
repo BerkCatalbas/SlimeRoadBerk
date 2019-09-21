@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
         if(rnd==0)//O yonde sinira ulastiginda tam tersi yone donmesi icin
         {
             this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(this.transform.position.x, this.transform.position.y, -1.9f), Time.deltaTime * speed);
-            if (this.transform.position.z < -1.4)
+            if (this.transform.position.z < -1.1)
             {
                 rnd = 1;
                 
@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
        if (rnd == 1)
         {
             this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(this.transform.position.x, this.transform.position.y, 1.9f), Time.deltaTime * speed);
-            if (this.transform.position.z > 1.4)
+            if (this.transform.position.z > 1.1)
                 rnd = 0;
            
         }
